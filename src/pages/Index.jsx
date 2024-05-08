@@ -1,5 +1,5 @@
-import { Box, Flex, Heading, Text, VStack, Link, Container } from "@chakra-ui/react";
-import { FaHome, FaEnvelope, FaPenNib } from "react-icons/fa";
+import { Box, Flex, Heading, Text, VStack, Link, Container, Image } from "@chakra-ui/react";
+import { FaHome, FaEnvelope, FaPenNib, FaProjectDiagram } from "react-icons/fa";
 
 const Index = () => {
   return (
@@ -11,6 +11,7 @@ const Index = () => {
             <Flex as="ul" listStyleType="none">
               <Link as="li" mx={2} href="#about" p={2} _hover={{ bg: "brand.700" }}><FaHome /> About Me</Link>
               <Link as="li" mx={2} href="#posts" p={2} _hover={{ bg: "brand.700" }}><FaPenNib /> Blog Posts</Link>
+              <Link as="li" mx={2} href="#featured-projects" p={2} _hover={{ bg: "brand.700" }}><FaProjectDiagram /> Featured Projects</Link>
               <Link as="li" mx={2} href="#contact" p={2} _hover={{ bg: "brand.700" }}><FaEnvelope /> Contact</Link>
             </Flex>
           </Flex>
@@ -24,6 +25,20 @@ const Index = () => {
             <Box id="posts" p={4} shadow="md" bg="white">
               <Heading as="h2" size="md">Blog Posts</Heading>
               <Text mt={2}>Explore my latest blog posts on technology, lifestyle, and more.</Text>
+            </Box>
+            <Box id="featured-projects" p={4} shadow="md" bg="white">
+              <Heading as="h2" size="md">Featured Projects</Heading>
+              <Text mt={2}>Here are some of my standout projects:</Text>
+              <Flex wrap="wrap" justify="center" mt={4}>
+                <Box p={4} m={2} shadow="sm" borderWidth="1px">
+                  <Image src="/path/to/project1.jpg" alt="Project 1" />
+                  <Text mt={2}>Project 1 - A brief description of the project.</Text>
+                </Box>
+                <Box p={4} m={2} shadow="sm" borderWidth="1px">
+                  <Image src="/path/to/project2.jpg" alt="Project 2" />
+                  <Text mt={2}>Project 2 - A brief description of the project.</Text>
+                </Box>
+              </Flex>
             </Box>
             <Box id="contact" p={4} shadow="md" bg="white">
               <Heading as="h2" size="md">Contact</Heading>
